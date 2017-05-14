@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.wnd.myapp.lenovate.loginAct"
+    tools:showIn="@layout/activity_login"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/imageView6"
+        android:src="@drawable/login_screen_logo"
+        android:layout_weight="0.11"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/uname_text"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/border"
+        android:textSize="18sp"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="15dp"
+        android:textColor="@color/greenShade1"
+        android:textColorHint="@color/greenShade1"
+        android:fontFamily="sans-serif"    />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:fontFamily="sans-serif"
+        android:ems="10"
+        android:hint="Password"
+        android:id="@+id/pswd_text"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:textColor="@color/greenShade1"
+        android:background="@drawable/border"
+        android:textColorHint="@color/greenShade1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/loginButt"
+        android:paddingTop="10dp"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/borderbutt"
+        android:padding="15sp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"    />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/registButt"
+        android:paddingTop="10dp"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/borderbutt"
+        android:padding="15sp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"    />
+
+
+</LinearLayout>

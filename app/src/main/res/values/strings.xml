@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Lenovate</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string-array name="selectAction">
+        <item>Resend OTP</item>
+        <item>Enter OTP Manually</item>
+    </string-array>
+
+
+    <string name="dashboard_Category_Name">First</string>
+    <string name="title_activity_profile">profile</string>
+    <string name="Category_Item_Name">Item 1</string>
+    <string name="Item_view_AppBarTitle">   WoodnDecor</string>
+    <string name="Item_Number">Item Number</string>
+    <string name="Item_Name">Item Name</string>
+    <string name="Item_Location">Item Location</string>
+    <string name="Rupee_Symbol">₹</string>
+    <string name="Cost_Of_Item">25000</string>
+    <string name="Add_To_Cart">  Add To Cart  </string>
+    <string name="Profile_view_AppBarTitle">   Profile</string>
+    <string name="chat_view_AppBarTitle">   Chat</string>
+    <string name="name_of_user">   Name</string>
+    <string name="dob_of_user">   Date of Birth</string>
+    <string name="mob_no_of_user">   Mobile no.</string>
+    <string name="address_of_user">   Address</string>
+    <string name="facebook_app_id">765556200261606</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">Login </string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_history">History</string>
+
+    <string name="title_activity_image_full_screen">ImageFullScreen</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_zoomview">zoomview</string>
+    <string name="title_activity_mycollections">My Collections</string>
+    <string name="title_activity_live_chat">liveChat</string>
+    <string name="title_activity_search_result">SearchResult</string>
+    <string name="title_activity_howto">howto</string>
+    <string name="title_activity_testactivity">testactivity</string>
+    <string name="title_activity_enquiry">Assistance</string>
+    <string name="title_activity_getin_touch">Get In Touch</string>
+</resources>

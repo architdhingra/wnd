@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.wnd.myapp.lenovate.ProductInfo">
+
+    <RelativeLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C0000000"
+        android:elevation="1dp"
+        android:onClick="bottom_cart_cancel"
+        android:visibility="gone" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/aviHome"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:visibility="visible"
+        app:indicatorColor="@color/colorPrimary"
+        app:indicatorName="BallPulseIndicator" />
+
+    <RelativeLayout
+        android:id="@+id/parentscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_above="@+id/addcart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <com.pixelcan.inkpageindicator.InkPageIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:paddingBottom="10dp"
+                        app:animationDuration="320"
+                        app:currentPageIndicatorColor="@color/white"
+                        app:dotDiameter="8dp"
+                        app:dotGap="8dp"
+                        app:pageIndicatorColor="@android:color/darker_gray" />
+
+                </RelativeLayout>
+
+                <com.wnd.myapp.lenovate.changetypeface
+                    android:id="@+id/prodname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Product Name"
+                    android:textSize="28dp"
+                    app:typeface="Roboto-Bold.ttf" />
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    app:cardElevation="3dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="7dp"
+                        android:paddingBottom="10dp">
+
+
+                        <com.wnd.myapp.lenovate.changetypeface
+                            android:id="@+id/salon_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Price "
+                            android:textSize="18dp"
+                            app:typeface="Roboto-Bold.ttf" />
+
+                        <com.wnd.myapp.lenovate.changetypeface
+                            android:id="@+id/prodprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/salon_addr"
+                            android:layout_marginTop="17dp"
+                            android:layout_toRightOf="@+id/salon_addr"
+                            android:text="Rs. 100/-"
+                            android:textSize="13dp"
+                            app:typeface="Roboto-Light.ttf" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/salon_name"
+                            android:layout_marginTop="7dp"
+                            android:background="#dbdbdb" />
+
+                        <com.wnd.myapp.lenovate.changetypeface
+                            android:id="@+id/salon_addr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/salon_name"
+                            android:layout_marginTop="15dp"
+                            android:text="Description   "
+                            android:textSize="18dp"
+                            app:typeface="Roboto-Bold.ttf" />
+
+                        <com.wnd.myapp.lenovate.changetypeface
+                            android:id="@+id/desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/salon_name"
+                            android:layout_marginTop="17dp"
+                            android:layout_toRightOf="@+id/salon_addr"
+                            android:text="About the product"
+                            android:textSize="13dp"
+                            app:typeface="Roboto-Light.ttf" />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/addcart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:onClick="enquire"
+                android:text="Enquire"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="17dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:onClick="selectQuantity"
+                android:text="Add To Cart"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="17dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/AddcartBottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:clipToPadding="true"
+        android:elevation="2dp"
+        android:paddingBottom="40dp"
+        app:behavior_hideable="true"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:text="Select Quantity"
+                    android:textSize="25dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/bottom_cart_cancel"
+                    android:background="@drawable/savecollectionbtn"
+                    android:onClick="addtocart"
+                    android:padding="7dp"
+                    android:text="Add"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/bottom_cart_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/removecollectionbtn"
+                    android:onClick="bottom_cart_cancel"
+                    android:padding="7dp"
+                    android:text="Cancel"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#8c8c8c" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/circlebutton"
+                        android:onClick="decreaseQuantity"
+                        android:text="-"
+                        android:textColor="#ffffff"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:id="@+id/quantityText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center_vertical"
+                        android:text="1"
+                        android:textSize="20dp" />
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/circlebutton"
+                        android:onClick="increaseQuantity"
+                        android:text="+"
+                        android:textColor="#ffffff"
+                        android:textSize="30dp" />
+
+                </LinearLayout>
+
+
+                <com.wnd.myapp.lenovate.changetypeface
+                    android:id="@+id/quantityPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="Rs. 0/-  "
+                    android:textSize="25dp"
+                    app:typeface="Roboto-Bold.ttf" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

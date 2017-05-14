@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wnd.myapp.lenovate">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <permission
+        android:name="android.permission.WRITE_SETTINGS"
+        android:protectionLevel="dangerous" />
+    android:protectionLevel="signature|system|appop|pre23" />
+    <permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:protectionLevel="dangerous" />
+    android:protectionLevel="signature|system|appop|pre23" />
+    <permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:protectionLevel="dangerous" />
+    android:protectionLevel="signature|system|appop|pre23" />
+    <permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION"
+        android:protectionLevel="dangerous" />
+    android:protectionLevel="signature|system|appop|pre23" />
+    <permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        android:protectionLevel="dangerous" />
+    android:protectionLevel="signature|system|appop|pre23" />
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Lenovate"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Dashboard"
+            android:label="Lenovate"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Item"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".Chat"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".LoginScreen"
+            android:label="Lenovate"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".loginAct"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Register"
+            android:label="@string/title_activity_register"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".FullScreenImageView" />
+
+        <activity android:name=".SubCategoryGallery"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name=".ProductInfo" />
+        <activity android:name=".Settings" />
+        <activity
+            android:name=".Cart"
+            android:label="Cart"
+            android:parentActivityName=".Dashboard">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wnd.myapp.lenovate.Dashboard" />
+        </activity>
+        <activity android:name=".esLogin" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:theme" />
+        <activity android:name=".ProductListings" />
+        <activity
+            android:name=".History"
+            android:label="@string/title_history"
+            android:parentActivityName=".Dashboard">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wnd.myapp.lenovate.Dashboard" />
+        </activity>
+        <activity
+            android:name=".OrderDetails"
+            android:label="Order Summary"
+            android:parentActivityName=".History">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wnd.myapp.lenovate.History" />
+        </activity>
+        <activity
+            android:name=".WebViewActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name" />
+
+        <receiver android:name=".SmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".StatusActivity"
+            android:label="Status" />
+        <activity
+            android:name=".profile"
+            android:label="@string/title_activity_profile"
+            android:parentActivityName=".Dashboard"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wnd.myapp.lenovate.Dashboard" />
+        </activity>
+        <activity
+            android:name=".zoomview"
+            android:label="@string/title_activity_zoomview"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mycollections"
+            android:label="@string/title_activity_mycollections"
+            android:parentActivityName=".Dashboard">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wnd.myapp.lenovate.Dashboard" />
+        </activity>
+        <activity
+            android:name=".SearchResult"
+            android:label="@string/title_activity_search_result"
+            android:parentActivityName=".Dashboard"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wnd.myapp.lenovate.Dashboard" />
+        </activity>
+        <activity
+            android:name=".howto"
+            android:label="@string/title_activity_howto"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".testactivity"
+            android:label="@string/title_activity_testactivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".enquiry"
+            android:label="@string/title_activity_enquiry" />
+        <activity
+            android:name=".GetinTouch"
+            android:label="@string/title_activity_getin_touch"
+            android:parentActivityName=".Dashboard">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wnd.myapp.lenovate.Dashboard" />
+        </activity>
+        <activity
+            android:name=".DefaultIntro"
+            android:label="Intro Label"
+            android:theme="@style/FullscreenIntroTheme" />
+        <activity android:name=".livepreview1" />
+        <activity android:name=".livepreview2" />
+        <activity android:name=".livepreview_main" />
+        <activity android:name=".tnc"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".privacy_policy"
+            android:theme="@style/AppTheme.NoActionBar"/>
+    </application>
+
+</manifest>

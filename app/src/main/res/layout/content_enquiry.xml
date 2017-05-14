@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_enquiry"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.wnd.myapp.lenovate.enquiry">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/enq_submit"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <com.wnd.myapp.lenovate.changetypeface
+                android:id="@+id/enq_prodname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="PRODUCT"
+                android:textSize="20dp"
+                app:typeface="Kirvy-Bold.otf" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/enq_prodimg"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="7dp"
+                    android:padding="5dp"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/chooseimg"
+                    android:visibility="gone"
+                    android:background="@drawable/choose_image"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="6mm"
+                    android:layout_height="6mm"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/ic_menu_camera2"
+                    android:onClick="selectImage"
+                    android:text="Choose An Image "/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="25dp">
+
+                    <com.wnd.myapp.lenovate.changetypeface
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Enquiry Details"
+                        android:textSize="20sp"
+                        app:typeface="Kirvy-Bold.otf" />
+
+                    <EditText
+                        android:id="@+id/enq_name"
+                        android:layout_width="match_parent"
+                        android:textSize="15sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:hint="Name" />
+
+                    <EditText
+                        android:id="@+id/enq_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+                        android:hint="Email" />
+
+                    <EditText
+                        android:id="@+id/enq_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+                        android:hint="Phone Number" />
+
+                    <EditText
+                        android:id="@+id/enq_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+                        android:hint="Enter Your Query"
+                        android:minHeight="60dp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/enq_submit"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:onClick="submit">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="SUBMIT"
+            android:textColor="#ffffff"
+            android:textSize="17dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:translationZ="4dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="2dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/product_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/action_settings"
+                android:src="@drawable/ic_fullscreen_exit_black_24dp"
+                android:background="#5525"
+                android:layout_weight="0.8"
+                android:layout_marginTop="5dp"
+
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="GalleryITem"
+                android:textColor="#000000"
+                android:textAlignment="textStart"
+
+                android:layout_weight="0.2"
+                android:fontFamily="sans-serif-light"
+                android:translationZ="5dp"/>
+
+            <TextView
+                android:id="@+id/shopIdHolder"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+
+                />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Rs.  "
+                        android:textColor="#acacac"
+                        android:textAlignment="center"
+
+                        android:layout_weight="0.2"
+                        android:fontFamily="sans-serif-light"
+                        android:translationZ="5dp"
+
+
+
+
+                        />
+                    <TextView
+                        android:id="@+id/product_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Price"
+                        android:textColor="#acacac"
+                        android:textAlignment="center"
+
+                        android:layout_weight="0.2"
+                        android:fontFamily="sans-serif-light"
+                        android:translationZ="5dp"
+
+
+
+
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:scaleType="centerInside"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/shopping_cart"
+                    android:background="#00000000"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

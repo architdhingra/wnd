@@ -1,0 +1,43 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    tools:context="com.wnd.myapp.lenovate.gallery">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/aviHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        style="@style/AVLoadingIndicatorView"
+        android:visibility="visible"
+        app:indicatorName="BallPulseIndicator"
+        app:indicatorColor="@color/colorPrimary"
+        android:layout_centerInParent="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill_vertical"
+        android:id="@+id/scrollView"
+        android:visibility="gone"
+        android:scrollbars="none"
+        android:layout_margin="5dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <com.wnd.myapp.lenovate.externalDecor.GridRecyclerView
+        android:id="@+id/fragment_recycler"
+        android:nestedScrollingEnabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</ScrollView>
+
+
+</FrameLayout>

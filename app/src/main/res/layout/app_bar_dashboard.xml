@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.wnd.myapp.lenovate.Dashboard">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/safed"
+            android:fontFamily="sans-serif"
+            android:elevation="9dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="#747474" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_main"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:background="#e6e6e6"
+            android:visibility="visible"
+            app:layout_collapseMode="none"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="#747474"
+            app:tabIndicatorHeight="3dp"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="#747474"
+            app:tabTextColor="#969696" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </android.support.v4.view.ViewPager>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:onClick="openEnquire"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/assistance_enquire" />
+
+
+</android.support.design.widget.CoordinatorLayout>

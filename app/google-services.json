@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1058289076940",
+    "project_id": "lenovate-f8497"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058289076940:android:c6b4a68678d245d8",
+        "android_client_info": {
+          "package_name": "com.wnd.myapp.lenovate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058289076940-mnmf8dkt55fhqh35t0gm25dsaihemq0d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wnd.myapp.lenovate",
+            "certificate_hash": "50374DC82681ADE9D6130D9B44E176F57744B840"
+          }
+        },
+        {
+          "client_id": "1058289076940-lsti3l25cs3ce8pi6kqqa7kt6l6c9os1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8e5nJxCVr8C6TLKPdhmvH9nj2ZFWPCVM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

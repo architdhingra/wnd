@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+    <group
+        android:id="@+id/menuTop"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/dashboard"
+            android:title="DashBoard" />
+
+        <item
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/chat"
+            android:title="Chat" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profilemale"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/history_order"
+            android:title="History" />
+
+        <item
+            android:id="@+id/nav_mycollections"
+            android:icon="@drawable/myideabook"
+            android:title="My Collections" />
+
+        <item
+            android:id="@+id/nav_enquire"
+            android:icon="@drawable/assistance_enquire"
+            android:title="Assistance" />
+    <!--    <item
+            android:id="@+id/live1"
+            android:icon="@drawable/livepreview"
+            android:title="Live Preview" />
+        <item
+            android:id="@+id/live2"
+            android:icon="@drawable/virtualview"
+            android:title="Virtual list" /> -->
+    </group>
+
+
+    <group
+        android:id="@+id/menuBott"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_getintouch"
+            android:icon="@drawable/getintouch"
+            android:title="Get In Touch" />
+        <item
+            android:id="@+id/nav_tnc"
+            android:icon="@drawable/tnc"
+            android:title="Terms and Conditions" />
+        <item
+            android:id="@+id/nav_privacypolicy"
+            android:icon="@drawable/privacypolicy"
+            android:title="Privacy Policy" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/share"
+            android:title="Share" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="Logout" />
+    </group>
+
+
+</menu>

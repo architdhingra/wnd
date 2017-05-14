@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_zoomview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.wnd.myapp.lenovate.zoomview"
+    tools:showIn="@layout/activity_zoomview">
+
+    <RelativeLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C0000000"
+        android:elevation="1dp"
+        android:onClick="close_filter"
+        android:visibility="gone" />
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#00000000"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/aviHome"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:visibility="visible"
+        app:indicatorColor="@color/colorPrimary"
+        app:indicatorName="BallPulseIndicator" />
+
+
+    <RelativeLayout
+        android:id="@+id/zoomimglayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <com.wnd.myapp.lenovate.TouchImageView
+            android:id="@+id/prodimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/placeholder" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/more"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:onClick="moredesc">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/imagedesc"
+                    android:padding="10dp"
+                    android:text="Description"
+                    android:textAlignment="center"
+                    android:textColor="#a3a3a3"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/enquire"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:onClick="enquire">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/imagedesc"
+                    android:padding="10dp"
+                    android:text="Enquire"
+                    android:textAlignment="center"
+                    android:textColor="#a3a3a3"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/savebtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/savecollectionbtn"
+                    android:gravity="center_vertical"
+                    android:onClick="SaveCollections_save"
+                    android:padding="10dp"
+                    android:text="+ Save"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="17sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/removebtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/removecollectionbtn"
+                    android:gravity="center_vertical"
+                    android:onClick="SaveCollections_remove"
+                    android:padding="10dp"
+                    android:text="Remove"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="17sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:clipToPadding="true"
+        android:elevation="2dp"
+        android:minHeight="200dp"
+        android:paddingBottom="10dp"
+        android:visibility="visible"
+        app:behavior_hideable="true"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Description:"
+                android:textSize="25dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="#8c8c8c" />
+
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:id="@+id/note_byuser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Your note:"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/note_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/bottom_sheet_save"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#ffffff"
+        android:clipToPadding="true"
+        android:elevation="2dp"
+        android:visibility="visible"
+        app:behavior_hideable="true"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:text="My Collections"
+                    android:textSize="25dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/savecollectionbtn"
+                    android:onClick="SaveCollections_Done"
+                    android:padding="7dp"
+                    android:text="Done"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#8c8c8c" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text="Add a note:"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="#8c8c8c" />
+
+
+            <EditText
+                android:id="@+id/MyCollection_note"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:hint="Write Your Text here"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

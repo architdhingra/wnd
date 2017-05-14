@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.wnd.myapp.lenovate.chatFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/container">
+
+                <ListView
+                    android:id="@+id/messagesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_above="@+id/msgtxt"
+                    android:listSelector="@android:color/transparent"
+                    android:transcriptMode="alwaysScroll"
+                    android:divider="@null" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="90dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:hint="Enter Your Message Here"
+                    android:layout_alignParentLeft="true"
+                    android:backgroundTint="#8A2BE2"
+                    android:id="@+id/msgtxt"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:text="Send"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#ffffff"
+                    android:background="#00b200"
+                    android:id="@+id/sndbtn"/>
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <!--<com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avi"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/AVLoadingIndicatorView"
+        android:visibility="visible"
+        app:indicatorName="BallPulseIndicator"
+        app:indicatorColor="@color/colorPrimary"
+        />
+        -->
+
+
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/dashboard_main_page"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.wnd.myapp.lenovate.Dashboard"
+    android:background="@color/mainAppBackground">
+
+    <android.support.design.widget.CoordinatorLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/dashboard_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/Dashboard_Appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:fitsSystemWindows="true">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_main"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:gravity="center"
+                app:tabIndicatorColor="#F1514A"
+                app:tabGravity="fill"
+                app:tabTextColor="#d7d7d7"
+                app:tabSelectedTextColor="#ffffff"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="bottom"
+                app:tabMode="scrollable"
+                app:layout_collapseMode="none"
+                android:translationZ="5dp" />
+
+
+    </android.support.design.widget.AppBarLayout>
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/view_pager_tabs"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        </android.support.v4.view.ViewPager>
+
+ </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

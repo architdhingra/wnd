@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="6dp"
+            android:padding="2dp"
+            android:background="@drawable/filter_selected">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginLeft="9dp"
+            android:textColor="#ffffff"
+            android:id="@+id/selectedFilter_text"
+            android:layout_gravity="center_vertical"
+            android:text="Color"/>
+
+        <ImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="7dp"
+            android:onClick="removefilter"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/close"/>
+
+        </LinearLayout>
+
+
+
+</LinearLayout>

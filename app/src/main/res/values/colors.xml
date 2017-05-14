@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8a6a4a</color>
+    <color name="white">#ffffff</color>
+    <color name="colorPrimaryDark">#8a6a4a</color>
+    <color name="colorAccent">#92d14f</color>
+    <color name="textColor">#747474</color>
+    <color name="textColor2">#000000</color>
+    <color name="biege">#f5f5dc</color>
+    <color name="safed">#ffffff</color>
+    <color name="black">#000000</color>
+
+
+    <color name="mainAppBackground">#cebbb4</color>
+    <color name="categoryTextColor">#00a78a</color>
+    <color name="greenShade1">#78be4d</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="default_circle_indicator_page_color">#ffffff</color>
+    <color name="default_circle_indicator_fill_color">#123423</color>
+    <color name="default_circle_indicator_stroke_color">#000000</color>
+
+
+</resources>
